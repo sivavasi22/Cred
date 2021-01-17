@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.credappassignment.ExpandableLayout
+
+            android:id="@+id/expandable_layout_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_expanded="true">
+            <RelativeLayout
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:id="@+id/main_Activity"
+                android:background="#17202A"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5"
+                    android:layout_marginBottom="100dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/relative_layout11"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_button4"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Siva, how much do you need?"
+                            android:id="@+id/text_view11"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            >
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/text_view11"
+                            android:text="move the dail and set any amount upto 1000"
+                            android:id="@+id/text_view22"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="15dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/relative_layout1"
+                        android:layout_marginRight="20dp"
+                        android:padding="20dp"
+                        android:layout_weight="3"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rounded_button"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="@style/CircularDeterminateProgressBar"
+                            android:layout_width="200dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="200dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:progress="60" />
+                        <TextView
+                            android:id="@+id/text_view_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                            app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                            app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                            tools:text="₹ 0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_above="@+id/progress_bar"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15dp"
+                            android:text="Credit Amount">
+
+                        </TextView>
+                        <Button
+                            android:id="@+id/button_decr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- 10%"
+                            android:background="#EDBB99"
+                            android:textColor="#ffffff"
+                            android:layout_marginLeft="25dp"
+                            android:layout_below="@+id/progress_bar"
+                            app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+                        <Button
+                            android:id="@+id/button_incr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ 10%"
+                            android:textColor="#ffffff"
+                            android:background="#A04000"
+                            android:layout_marginRight="25dp"
+                            android:layout_below="@+id/progress_bar"
+                            android:layout_alignParentRight="true"
+                            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_below="@id/button_incr"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Stash is instant. Money will be credited with in seconds"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button3"
+                    android:textSize="20dp"
+                    android:id="@+id/proceed_button"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Proceed to EMI selection"
+                    android:layout_alignParentBottom="true">
+
+                </Button>
+            </RelativeLayout>
+        </com.example.credappassignment.ExpandableLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_layout_1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rounded_button4"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="Credit Amount"
+                android:id="@+id/text_view111"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text_view111"
+                android:text="₹ 100"
+                android:id="@+id/text_view222"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-light"
+                android:textSize="25dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:id="@+id/expand_button_0"
+                android:background="@drawable/ic_baseline_expand_more_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+        </RelativeLayout>
+
+
+        <com.example.credappassignment.ExpandableLayout
+
+            android:id="@+id/expandable_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+
+            app:el_expanded="true">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="#111111"
+
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    android:layout_marginBottom="100dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/relative_layout1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_button4"
+                        android:layout_marginTop="50dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="how do ypu wish to repay?"
+                            android:id="@+id/text_view1"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            >
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/text_view1"
+                            android:text="chosse the below plans"
+                            android:id="@+id/text_view2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="15dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </RelativeLayout>
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="70dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/rounded_button5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            style="@style/CustomCheckbox02"
+                            android:id="@+id/check_box"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content">
+
+                        </CheckBox>
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/check_box"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="₹100/mon" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textView"
+                            android:text="for 1 month" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/textView2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="95dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_height="wrap_content"
+                            android:text="see calculations" />
+
+                    </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/rounded_button5"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                style="@style/CustomCheckbox02"
+                                android:id="@+id/check_box2"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_height="wrap_content">
+
+                            </CheckBox>
+
+                            <TextView
+                                android:id="@+id/textView22222"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/check_box2"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="₹100/mon" />
+
+                            <TextView
+                                android:id="@+id/textView2222"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView22222"
+                                android:text="for 2 months" />
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/textView2222"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="95dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_height="wrap_content"
+                                android:text="see calculations" />
+
+                        </RelativeLayout>
+</LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button3"
+                    android:textSize="20dp"
+                    android:id="@+id/select_bank_button"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Select your bank account"
+                    android:layout_alignParentBottom="true">
+
+                </Button>
+
+            </RelativeLayout>
+
+        </com.example.credappassignment.ExpandableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_layout_13"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rounded_button4"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="EMI"
+                android:id="@+id/text_view1113"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text_view1113"
+                android:text="₹ 100/mo"
+                android:id="@+id/text_view2223"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-light"
+                android:textSize="25dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="duration"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_view111_3"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text_view1113"
+                android:text="12 months"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_view222_3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:id="@+id/expand_button_2"
+                android:background="@drawable/ic_baseline_expand_more_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+        </RelativeLayout>
+
+
+
+        <com.example.credappassignment.ExpandableLayout
+
+            android:id="@+id/expandable_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="500"
+            app:el_expanded="true">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="#111111"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:weightSum="10"
+                    android:layout_marginBottom="100dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/relative_layout01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_button4"
+                        android:layout_marginTop="50dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Where should we send the money?"
+                            android:id="@+id/text_view01"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            >
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/text_view01"
+                            android:text="Amount will be credited to this bank account, EMI will also be debited from the bank account"
+                            android:id="@+id/text_view02"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="15dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_below="@id/text_view02"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/rounded_button4"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:id="@+id/image_View"
+                                android:background="@drawable/ic_launcher_foreground"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_toRightOf="@+id/image_View"
+                                    android:text="HDFC bank"
+                                    android:id="@+id/bank_name"
+                                    android:layout_marginTop="20dp"
+                                    android:textColor="#ffffff"
+                                    android:textSize="20dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_toRightOf="@+id/image_View"
+                                    android:text="5010101010101"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_below="@id/bank_name"
+                                    android:textColor="#ffffff"
+
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                style="@style/CustomCheckbox02"
+                                android:id="@+id/check_box3"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button3"
+                    android:textSize="20dp"
+                    android:id="@+id/select_bank_button2"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Tap for 1-click KYC"
+                    android:layout_alignParentBottom="true">
+
+                </Button>
+            </RelativeLayout>
+
+        </com.example.credappassignment.ExpandableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
